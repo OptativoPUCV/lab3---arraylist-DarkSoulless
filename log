@@ -239,3 +239,15 @@ Fri 31 Mar 2023 11:46:33 AM UTC:
  tests:  1|5
 total_score: 10/70
 87f45b4
+Fri 31 Mar 2023 11:48:24 AM UTC: 
+ arraylist.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:5:
+arraylist.c: In function ‘append’:
+arraylist.c:24:3: error: ‘size’ undeclared (first use in this function); did you mean ‘dysize’?
+   24 |   size++;
+      |   ^~~~
+      |   dysize
+arraylist.c:24:3: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+34533ad
