@@ -150,3 +150,9 @@ arraylist.c:17:11: error: expected identifier before ‘*’ token
       |           ^
 Compilation failed
 cdebf8b
+Fri 31 Mar 2023 11:29:51 AM UTC: 
+ arraylist.c | 1 -
+ 1 file changed, 1 deletion(-)
+ tests:  0|6
+total_score: 0/70
+8ad7699
