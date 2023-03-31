@@ -100,3 +100,19 @@ arraylist.c:13:12: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 5cd9c97
+Fri 31 Mar 2023 11:23:58 AM UTC: 
+ arraylist.c | 13 ++++++-------
+ 1 file changed, 6 insertions(+), 7 deletions(-)
+In file included from test.c:5:
+arraylist.c: In function ‘createList’:
+arraylist.c:15:9: error: ‘ArrayList’ {aka ‘struct ArrayList’} has no member named ‘head’
+   15 |   lista -> head=NULL;
+      |         ^~
+arraylist.c:16:8: error: ‘ArrayList’ {aka ‘struct ArrayList’} has no member named ‘tail’
+   16 |   lista-> tail=NULL;
+      |        ^~
+arraylist.c:17:8: error: ‘ArrayList’ {aka ‘struct ArrayList’} has no member named ‘current’
+   17 |   lista->current=NULL;
+      |        ^~
+Compilation failed
+be41db4

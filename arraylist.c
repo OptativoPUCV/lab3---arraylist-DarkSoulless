@@ -10,13 +10,12 @@ typedef struct ArrayList {
     int size;
 } ArrayList;
 
-ArrayList *createList(void * data) {
-    Node * new = (Node *)malloc(sizeof(Node));
-    assert(new != NULL);
-    new->data = data;
-    new->prev = NULL;
-    new->next = NULL;
-    return new;
+ArrayList *createList(void) {
+  ArrayList * lista = (ArrayList *) malloc(sizeof(ArrayList));
+  lista -> head=NULL;
+  lista-> tail=NULL;
+  lista->current=NULL;
+  return lista;
 }
 
 void append(ArrayList * l, void * data){
