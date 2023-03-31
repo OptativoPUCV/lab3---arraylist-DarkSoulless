@@ -197,3 +197,14 @@ Fri 31 Mar 2023 11:42:24 AM UTC:
  tests:  1|5
 total_score: 10/70
 a9a6a3e
+Fri 31 Mar 2023 11:42:56 AM UTC: 
+ arraylist.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+arraylist.c: In function ‘append’:
+arraylist.c:23:10: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   23 |   l->size=realloc(data,(l->capacity)*2);
+      |          ^
+cc1: all warnings being treated as errors
+Compilation failed
+31b3d24
