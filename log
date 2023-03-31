@@ -471,3 +471,23 @@ Fri 31 Mar 2023 12:17:43 PM UTC:
  tests:  3|4
 total_score: 20/70
 af1c918
+Fri 31 Mar 2023 12:21:07 PM UTC: 
+ arraylist.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+In file included from test.c:5:
+arraylist.c: In function ‘push’:
+arraylist.c:36:7: error: ‘inth’ undeclared (first use in this function); did you mean ‘int’?
+   36 |   for(inth)
+      |       ^~~~
+      |       int
+arraylist.c:36:7: note: each undeclared identifier is reported only once for each function it appears in
+arraylist.c:36:11: error: expected ‘;’ before ‘)’ token
+   36 |   for(inth)
+      |           ^
+      |           ;
+arraylist.c:36:11: error: expected expression before ‘)’ token
+arraylist.c:39:1: error: expected expression before ‘}’ token
+   39 | }
+      | ^
+Compilation failed
+cb75d97
