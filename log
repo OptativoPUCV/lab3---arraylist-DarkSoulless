@@ -299,3 +299,13 @@ Fri 31 Mar 2023 11:55:06 AM UTC:
  tests:  2|5
 total_score: 15/70
 1176fa4
+Fri 31 Mar 2023 11:55:49 AM UTC: 
+ arraylist.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘append’:
+arraylist.c:27:1: error: expected expression before ‘}’ token
+   27 | }
+      | ^
+Compilation failed
+6940a25
