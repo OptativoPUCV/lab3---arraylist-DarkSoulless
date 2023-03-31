@@ -497,3 +497,18 @@ Fri 31 Mar 2023 12:21:17 PM UTC:
  tests:  3|4
 total_score: 20/70
 cb34343
+Fri 31 Mar 2023 02:23:37 PM UTC: 
+ arraylist.c | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+In file included from test.c:5:
+arraylist.c: In function ‘push’:
+arraylist.c:40:7: error: ‘intj’ undeclared (first use in this function); did you mean ‘int’?
+   40 |   for(intj=0;j<i;i++){
+      |       ^~~~
+      |       int
+arraylist.c:40:7: note: each undeclared identifier is reported only once for each function it appears in
+arraylist.c:40:14: error: ‘j’ undeclared (first use in this function)
+   40 |   for(intj=0;j<i;i++){
+      |              ^
+Compilation failed
+1f25e9d
