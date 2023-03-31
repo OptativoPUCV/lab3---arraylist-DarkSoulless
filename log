@@ -140,3 +140,13 @@ arraylist.c:17:11: error: expected identifier before ‘*’ token
       |           ^
 Compilation failed
 046f607
+Fri 31 Mar 2023 11:29:42 AM UTC: 
+ arraylist.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘createList’:
+arraylist.c:17:11: error: expected identifier before ‘*’ token
+   17 |   lista-> **data=NULL;
+      |           ^
+Compilation failed
+cdebf8b
