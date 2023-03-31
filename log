@@ -219,3 +219,17 @@ arraylist.c:23:10: error: assignment to ‘int’ from ‘void *’ makes intege
 cc1: all warnings being treated as errors
 Compilation failed
 24fa71a
+Fri 31 Mar 2023 11:45:54 AM UTC: 
+ arraylist.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+In file included from test.c:5:
+arraylist.c: In function ‘append’:
+arraylist.c:23:11: error: dereferencing ‘void *’ pointer [-Werror]
+   23 |   l->size=*realloc(data,(l->size)*2);
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~
+arraylist.c:23:10: error: void value not ignored as it ought to be
+   23 |   l->size=*realloc(data,(l->size)*2);
+      |          ^
+cc1: all warnings being treated as errors
+Compilation failed
+a44a8e6
