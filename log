@@ -116,3 +116,17 @@ arraylist.c:17:8: error: ‘ArrayList’ {aka ‘struct ArrayList’} has no mem
       |        ^~
 Compilation failed
 be41db4
+Fri 31 Mar 2023 11:29:21 AM UTC: 
+ arraylist.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+arraylist.c: In function ‘createList’:
+arraylist.c:16:15: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   16 |   lista-> size=NULL;
+      |               ^
+arraylist.c:17:11: error: expected identifier before ‘*’ token
+   17 |   lista-> *data=NULL;
+      |           ^
+cc1: all warnings being treated as errors
+Compilation failed
+a91f440
