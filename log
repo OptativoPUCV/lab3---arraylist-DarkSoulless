@@ -6,3 +6,42 @@ Fri 31 Mar 2023 11:21:11 AM UTC:
  tests:  0|6
 total_score: 0/70
 231fa1c
+Fri 31 Mar 2023 11:22:20 AM UTC: 
+ arraylist.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘createList’:
+arraylist.c:14:5: error: unknown type name ‘Node’
+   14 |     Node * new = (Node *)malloc(sizeof(Node));
+      |     ^~~~
+arraylist.c:14:19: error: ‘Node’ undeclared (first use in this function)
+   14 |     Node * new = (Node *)malloc(sizeof(Node));
+      |                   ^~~~
+arraylist.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+arraylist.c:14:25: error: expected expression before ‘)’ token
+   14 |     Node * new = (Node *)malloc(sizeof(Node));
+      |                         ^
+arraylist.c:16:8: error: request for member ‘data’ in something not a structure or union
+   16 |     new->data = data;
+      |        ^~
+arraylist.c:16:17: error: ‘data’ undeclared (first use in this function)
+   16 |     new->data = data;
+      |                 ^~~~
+arraylist.c:17:8: error: request for member ‘prev’ in something not a structure or union
+   17 |     new->prev = NULL;
+      |        ^~
+arraylist.c:18:8: error: request for member ‘next’ in something not a structure or union
+   18 |     new->next = NULL;
+      |        ^~
+arraylist.c:19:12: error: returning ‘int *’ from a function with incompatible return type ‘ArrayList *’ {aka ‘struct ArrayList *’} [-Werror=incompatible-pointer-types]
+   19 |     return new
+      |            ^~~
+arraylist.c:19:15: error: expected ‘;’ before ‘}’ token
+   19 |     return new
+      |               ^
+      |               ;
+   20 | }
+      | ~              
+cc1: all warnings being treated as errors
+Compilation failed
+920e6a5
