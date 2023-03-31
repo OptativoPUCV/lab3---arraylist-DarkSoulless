@@ -45,3 +45,58 @@ arraylist.c:19:15: error: expected ‘;’ before ‘}’ token
 cc1: all warnings being treated as errors
 Compilation failed
 920e6a5
+Fri 31 Mar 2023 11:22:38 AM UTC: 
+ arraylist.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+arraylist.c:13:12: error: conflicting types for ‘createList’; have ‘ArrayList *(void *)’ {aka ‘struct ArrayList *(void *)’}
+   13 | ArrayList *createList(void * data) {
+      |            ^~~~~~~~~~
+In file included from arraylist.c:4,
+                 from test.c:5:
+arraylist.h:6:12: note: previous declaration of ‘createList’ with type ‘ArrayList *(void)’ {aka ‘struct ArrayList *(void)’}
+    6 | ArrayList *createList(void);
+      |            ^~~~~~~~~~
+In file included from test.c:5:
+arraylist.c: In function ‘createList’:
+arraylist.c:14:5: error: unknown type name ‘Node’
+   14 |     Node * new = (Node *)malloc(sizeof(Node));
+      |     ^~~~
+arraylist.c:14:19: error: ‘Node’ undeclared (first use in this function)
+   14 |     Node * new = (Node *)malloc(sizeof(Node));
+      |                   ^~~~
+arraylist.c:14:19: note: each undeclared identifier is reported only once for each function it appears in
+arraylist.c:14:25: error: expected expression before ‘)’ token
+   14 |     Node * new = (Node *)malloc(sizeof(Node));
+      |                         ^
+arraylist.c:16:8: error: request for member ‘data’ in something not a structure or union
+   16 |     new->data = data;
+      |        ^~
+arraylist.c:17:8: error: request for member ‘prev’ in something not a structure or union
+   17 |     new->prev = NULL;
+      |        ^~
+arraylist.c:18:8: error: request for member ‘next’ in something not a structure or union
+   18 |     new->next = NULL;
+      |        ^~
+arraylist.c:19:12: error: returning ‘int *’ from a function with incompatible return type ‘ArrayList *’ {aka ‘struct ArrayList *’} [-Werror=incompatible-pointer-types]
+   19 |     return new;
+      |            ^~~
+test.c: In function ‘test_create’:
+test.c:77:20: error: too few arguments to function ‘createList’
+   77 |     ArrayList* l = createList();
+      |                    ^~~~~~~~~~
+In file included from test.c:5:
+arraylist.c:13:12: note: declared here
+   13 | ArrayList *createList(void * data) {
+      |            ^~~~~~~~~~
+test.c: In function ‘test_all’:
+test.c:325:20: error: too few arguments to function ‘createList’
+  325 |     ArrayList *l = createList();
+      |                    ^~~~~~~~~~
+In file included from test.c:5:
+arraylist.c:13:12: note: declared here
+   13 | ArrayList *createList(void * data) {
+      |            ^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+5cd9c97
