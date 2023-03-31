@@ -528,3 +528,17 @@ Fri 31 Mar 2023 02:27:51 PM UTC:
  tests:  5|3
 total_score: 30/70
 17615f1
+Fri 31 Mar 2023 02:30:34 PM UTC: 
+ arraylist.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:5:
+arraylist.c: In function ‘push’:
+arraylist.c:35:25: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   35 |   if(i>=l->size) return NULL;
+      |                         ^~~~
+arraylist.c:34:6: note: declared here
+   34 | void push(ArrayList * l, void * data, int i){
+      |      ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+2b3e856
