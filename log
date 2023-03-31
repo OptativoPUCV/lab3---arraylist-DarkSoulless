@@ -251,3 +251,8 @@ arraylist.c:24:3: error: ‘size’ undeclared (first use in this function); did
 arraylist.c:24:3: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 34533ad
+Fri 31 Mar 2023 11:48:32 AM UTC: 
+ arraylist.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|0
+ac9e3c3
