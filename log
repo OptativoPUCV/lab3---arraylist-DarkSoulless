@@ -681,3 +681,21 @@ Sat 01 Apr 2023 07:50:07 PM UTC:
  tests:  8|2
 total_score: 40/70
 a52a71f
+Sat 01 Apr 2023 07:55:25 PM UTC: 
+ arraylist.c | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+In file included from test.c:5:
+arraylist.c: In function ‘pop’:
+arraylist.c:58:12: error: expected ‘;’ before ‘:’ token
+   58 |   l->size--:
+      |            ^
+      |            ;
+arraylist.c:54:9: error: unused variable ‘temp’ [-Werror=unused-variable]
+   54 |   void *temp=get(l,i);
+      |         ^~~~
+arraylist.c:60:1: error: control reaches end of non-void function [-Werror=return-type]
+   60 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+3960910
