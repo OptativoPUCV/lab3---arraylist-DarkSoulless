@@ -716,3 +716,8 @@ arraylist.c:79:8: error: ‘list’ undeclared (first use in this function)
 arraylist.c:79:8: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 502ffa4
+Sat 01 Apr 2023 07:58:47 PM UTC: 
+ arraylist.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+ tests:  0|0
+8c1594a
