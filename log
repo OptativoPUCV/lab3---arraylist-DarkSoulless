@@ -626,3 +626,17 @@ Sat 01 Apr 2023 07:43:33 PM UTC:
  tests:  5|3
 total_score: 30/70
 8ae3ef9
+Sat 01 Apr 2023 07:43:46 PM UTC: 
+ arraylist.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+In file included from test.c:5:
+arraylist.c: In function ‘get’:
+arraylist.c:53:9: error: implicit declaration of function ‘index_from_negative’ [-Werror=implicit-function-declaration]
+   53 |     i = index_from_negative(i, l->size);
+      |         ^~~~~~~~~~~~~~~~~~~
+arraylist.c:54:10: error: implicit declaration of function ‘is_index_valid’ [-Werror=implicit-function-declaration]
+   54 |     if (!is_index_valid(i, l->size)) {
+      |          ^~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+839fc75
