@@ -50,9 +50,7 @@ void* pop(ArrayList * l, int i){
 
 
 void* get(ArrayList * l, int i) {
-    if (i < 0) {
-        i += l->size;  // convertir el índice negativo en uno positivo
-    }
+    
     if (i < 0 || i >= l->size) {
         return NULL;  // índice fuera de rango
     }
