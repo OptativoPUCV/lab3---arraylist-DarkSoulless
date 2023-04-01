@@ -556,3 +556,17 @@ arraylist.c:34:6: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 648d947
+Sat 01 Apr 2023 07:40:14 PM UTC: 
+ arraylist.c | 3 ---
+ 1 file changed, 3 deletions(-)
+In file included from test.c:5:
+arraylist.c: In function ‘push’:
+arraylist.c:35:25: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   35 |   if(i>=l->size) return NULL;
+      |                         ^~~~
+arraylist.c:34:6: note: declared here
+   34 | void push(ArrayList * l, void * data, int i){
+      |      ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+426c071
