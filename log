@@ -789,3 +789,9 @@ arraylist.c:14:37: note: referencing an object of size 8 allocated by â€˜mallocâ
 cc1: all warnings being treated as errors
 Compilation failed
 8f953f2
+Sat 01 Apr 2023 08:23:03 PM UTC: 
+ arraylist.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  16|0
+total_score: 70/70
+5491bad
