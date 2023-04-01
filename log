@@ -737,3 +737,29 @@ Sat 01 Apr 2023 08:10:58 PM UTC:
  1 file changed, 5 insertions(+), 1 deletion(-)
  tests:  0|0
 eb27c1e
+Sat 01 Apr 2023 08:16:18 PM UTC: 
+ arraylist.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘createList’:
+arraylist.c:15:9: error: array subscript ‘ArrayList {aka struct ArrayList}[0]’ is partly outside array bounds of ‘unsigned char[1]’ [-Werror=array-bounds]
+   15 |   lista -> capacity=2;
+      |         ^~
+arraylist.c:14:37: note: referencing an object of size 1 allocated by ‘malloc’
+   14 |   ArrayList * lista = (ArrayList *) malloc(sizeof(void));
+      |                                     ^~~~~~~~~~~~~~~~~~~~
+arraylist.c:16:9: error: array subscript ‘ArrayList {aka struct ArrayList}[0]’ is partly outside array bounds of ‘unsigned char[1]’ [-Werror=array-bounds]
+   16 |   lista -> size=0;
+      |         ^~
+arraylist.c:14:37: note: referencing an object of size 1 allocated by ‘malloc’
+   14 |   ArrayList * lista = (ArrayList *) malloc(sizeof(void));
+      |                                     ^~~~~~~~~~~~~~~~~~~~
+arraylist.c:17:9: error: array subscript ‘ArrayList {aka struct ArrayList}[0]’ is partly outside array bounds of ‘unsigned char[1]’ [-Werror=array-bounds]
+   17 |   lista -> data= malloc(sizeof(void));
+      |         ^~
+arraylist.c:14:37: note: referencing an object of size 1 allocated by ‘malloc’
+   14 |   ArrayList * lista = (ArrayList *) malloc(sizeof(void));
+      |                                     ^~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+cf3c622
