@@ -69,7 +69,7 @@ void* get(ArrayList * l, int i) {
     }
     return l->data[i];
 }
-
+//no tocar el get size
 int get_size(ArrayList * l){
   return l->size;
 }
