@@ -70,13 +70,14 @@ void* get(ArrayList * l, int i) {
     return l->data[i];
 }
 
-
-
 int get_size(ArrayList * l){
-    return l->size;
+  return l->size;
 }
 
 //remove elements
 void clean(ArrayList * l){
-    
+  free(list->data);
+  list->data = malloc(sizeof(void*) * 2);
+  list->capacity=2;
+  list->size=0;
 }

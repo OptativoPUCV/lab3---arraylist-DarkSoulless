@@ -705,3 +705,14 @@ Sat 01 Apr 2023 07:56:17 PM UTC:
  tests:  11|1
 total_score: 50/70
 7feaccb
+Sat 01 Apr 2023 07:58:32 PM UTC: 
+ arraylist.c | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘clean’:
+arraylist.c:79:8: error: ‘list’ undeclared (first use in this function)
+   79 |   free(list->data);
+      |        ^~~~
+arraylist.c:79:8: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+502ffa4
