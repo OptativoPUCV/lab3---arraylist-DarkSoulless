@@ -49,9 +49,17 @@ void* pop(ArrayList * l, int i){
     return NULL;
 }
 
-void* get(ArrayList * l, int i){
-    return NULL;
+
+void* get(ArrayList * l, int i) {
+  if (i < 0) {
+    i += l->size;  // convertir el índice negativo en uno positivo    
+  }
+  if (i < 0 || i >= l->size) {
+       return NULL;  // índice fuera de rango
+  }
+  return l->data[i];
 }
+
 
 int get_size(ArrayList * l){
     return l->size;
