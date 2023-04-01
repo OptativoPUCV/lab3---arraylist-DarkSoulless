@@ -45,29 +45,15 @@ void push(ArrayList * l, void * data, int i){
 }
 
 void* pop(ArrayList * l, int i){
-    if (i < 0) {
-        i += l->size;  // convertir el índice negativo en uno positivo
-    }
-    if (i < 0 || i >= l->size) {
-        return NULL;  // índice fuera de rango
-    }
-    void *temp = get(l, i);  // obtener el elemento en la posición i
-    for (int j = i; j < l->size - 1; j++) {
-        l->data[j] = l->data[j+1];  // desplazar los elementos una posición a la izquierda
-    }
-    l->size--;  // disminuir el tamaño de la lista
-    return temp;  // retornar el puntero al elemento eliminado
+    return NULL;
 }
-
 
 
 void* get(ArrayList * l, int i) {
     if (i < 0) {
         i += l->size;  // convertir el índice negativo en uno positivo
     }
-    if (i < 0 || i >= l->size) {
-        return NULL;  // índice fuera de rango
-    }
+    
     return l->data[i];
 }
 
