@@ -591,3 +591,21 @@ arraylist.c:55:10: error: implicit declaration of function ‘is_index_valid’ 
 cc1: all warnings being treated as errors
 Compilation failed
 24f0aeb
+Sat 01 Apr 2023 07:42:43 PM UTC: 
+ arraylist.c | 6 +-----
+ 1 file changed, 1 insertion(+), 5 deletions(-)
+In file included from test.c:5:
+arraylist.c: In function ‘push’:
+arraylist.c:35:25: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   35 |   if(i>=l->size) return NULL;
+      |                         ^~~~
+arraylist.c:34:6: note: declared here
+   34 | void push(ArrayList * l, void * data, int i){
+      |      ^~~~
+arraylist.c: In function ‘get’:
+arraylist.c:55:1: error: control reaches end of non-void function [-Werror=return-type]
+   55 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+3db1957

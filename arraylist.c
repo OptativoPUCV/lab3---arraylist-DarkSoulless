@@ -51,11 +51,7 @@ void* pop(ArrayList * l, int i){
 
 
 void* get(ArrayList * l, int i) {
-    i = index_from_negative(i, l->size);
-    if (!is_index_valid(i, l->size)) {
-        return NULL;
-    }
-    return l->data[i];
+
 }
 
 
