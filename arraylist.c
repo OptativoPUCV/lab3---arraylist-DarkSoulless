@@ -50,12 +50,15 @@ void* pop(ArrayList * l, int i){
 
 
 void* get(ArrayList * l, int i) {
-    i = index_from_negative(i, l->size);
-    if (!is_index_valid(i, l->size)) {
-        return NULL;
+    if (i < 0) {
+        i += l->size;  // convertir el índice negativo en uno positivo
+    }
+    if (i < 0 || i >= l->size) {
+        return NULL;  // índice fuera de rango
     }
     return l->data[i];
 }
+
 
 
 int get_size(ArrayList * l){

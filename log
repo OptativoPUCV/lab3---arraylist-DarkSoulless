@@ -640,3 +640,9 @@ arraylist.c:54:10: error: implicit declaration of function ‘is_index_valid’ 
 cc1: all warnings being treated as errors
 Compilation failed
 839fc75
+Sat 01 Apr 2023 07:44:09 PM UTC: 
+ arraylist.c | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+ tests:  8|2
+total_score: 40/70
+6cdc378
